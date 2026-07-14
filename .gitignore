@@ -1,0 +1,44 @@
+# STM32 / Keil MDK build artifacts
+*.o
+*.d
+*.crf
+*.lnp
+*.axf
+*.htm
+*.dep
+*.iex
+*.map
+*.lst
+*.uvguix
+*.uvgix.*
+*.scvd
+*.dbgconf
+*.build_log.htm
+*.tra
+*.Administrator
+
+# Keil project backup
+*.uvprojx.bak
+*.uvoptx.bak
+
+# JLink / debug
+JLinkLog.txt
+JLinkSettings.ini
+
+# Output directories
+OBJ/
+obj/
+Output/
+output/
+List/
+list/
+DebugConfig/
+
+# IDE
+*.uvguix.*
+*.uvoptx
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
