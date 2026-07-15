@@ -115,7 +115,7 @@ static void ILI9341_GPIO_Config(void)
     GPIO_Init(GPIOE, &GPIO_InitStructure);
 }
 
-/* ===== 背光 ===== */
+/* ===== 背光 (低电平点亮) ===== */
 static void ILI9341_BackLight(uint8_t uOnOff)
 {
     if (uOnOff)
@@ -295,7 +295,7 @@ uint16_t LCD_GetPixel(uint16_t usX, uint16_t usY)
     return val;
 }
 
-/* ===== 画线 ===== */
+/* ===== 画线 (Bresenham) ===== */
 void LCD_DrawLine(uint16_t usX1, uint16_t usY1, uint16_t usX2, uint16_t usY2)
 {
     int dx  = (usX2 > usX1) ? (usX2 - usX1) : (usX1 - usX2);
@@ -340,7 +340,7 @@ void LCD_DrawCircle(uint16_t usX_Center, uint16_t usY_Center, uint16_t usRadius,
             for(i=usX_Center-y; i<=usX_Center+y; i++) LCD_SetPixel(i, usY_Center+x);
             for(i=usX_Center-y; i<=usX_Center+y; i++) LCD_SetPixel(i, usY_Center-x);
         } else {
-            LCD_SetPixel(usX_Center+x, usY_Center+y); LCD_SetPixel(usY_Center+y, usX_Center+x);
+            LCD_SetPixel(usX_Center+x, usY_Center+y); LCD_SetPixel(usX_Center+y, usY_Center+x);
             LCD_SetPixel(usX_Center-y, usY_Center+x); LCD_SetPixel(usX_Center-x, usY_Center+y);
             LCD_SetPixel(usX_Center-x, usY_Center-y); LCD_SetPixel(usX_Center-y, usY_Center-x);
             LCD_SetPixel(usX_Center+y, usY_Center-x); LCD_SetPixel(usX_Center+x, usY_Center-y);

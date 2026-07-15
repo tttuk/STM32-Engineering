@@ -100,28 +100,28 @@ const uint8_t ASCII8x16_Table [ ] = {
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x71,0x4b,0x06,0x00,0x00,0x00,0x00,0x00,
 };
 FONT ASCII_8x16 = {
-ASCII8x16_Table,
-8, /* 字宽 */
-16, /* 字高 */
+  ASCII8x16_Table,
+  8, /* 字宽 */
+  16, /* 字高 */
 };
 
-static FONT *g_LCD_FontEN = &ASCII_8x16; //英文字体
+static FONT *g_LCD_FontEN = &ASCII_8x16;    //英文字体
 
 void LCD_SetFontEN(FONT *fonts){
-g_LCD_FontEN = fonts;
+  g_LCD_FontEN = fonts;
 }
 
 
 /**
-* @brief 获取当前字体类型
-* @param None.
-* @retval 返回当前字体类型
-*/
+  * @brief  获取当前字体类型
+  * @param  None.
+  * @retval 返回当前字体类型
+  */
 FONT *LCD_GetFontEN(void){
-return g_LCD_FontEN;
+  return g_LCD_FontEN;
 }
 
 uint8_t *LCD_GetMaskEN(char cChar){
-//取字模位置
-return (uint8_t*)(g_LCD_FontEN->table + (cChar-' ')*(g_LCD_FontEN->Width*g_LCD_FontEN->Height)/8);
+    //取字模位置
+    return (uint8_t*)(g_LCD_FontEN->table + (cChar-' ')*(g_LCD_FontEN->Width*g_LCD_FontEN->Height)/8);
 }

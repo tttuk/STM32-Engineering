@@ -382,9 +382,14 @@
           <GroupName>BSP</GroupName>
           <Files>
             <File>
-              <FileName>lcd_ili9341.c</FileName>
+              <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\lcd_ili9341.c</FilePath>
+              <FilePath>..\BSP\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\dht11.c</FilePath>
             </File>
             <File>
               <FileName>lcd_fonts.c</FileName>
@@ -392,34 +397,19 @@
               <FilePath>..\BSP\lcd_fonts.c</FilePath>
             </File>
             <File>
+              <FileName>lcd_ili9341.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\lcd_ili9341.c</FilePath>
+            </File>
+            <File>
+              <FileName>nfc_pn532.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\nfc_pn532.c</FilePath>
+            </File>
+            <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\delay.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_fonts.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\lcd_fonts.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_ili9341.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\lcd_ili9341.h</FilePath>
-            </File>
-            <File>
-              <FileName>usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\usart.h</FilePath>
             </File>
           </Files>
         </Group>

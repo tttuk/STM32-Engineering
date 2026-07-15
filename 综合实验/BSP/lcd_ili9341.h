@@ -24,18 +24,18 @@ uint16_t LCD_GetLenX(void);
 uint16_t LCD_GetLenY(void);
 void LCD_SetColors(uint16_t TextColor, uint16_t BackColor);
 void LCD_GetColors(uint16_t *TextColor, uint16_t *BackColor);
-void LCD_SetTextColor(uint16_t Color)    ;
+void LCD_SetTextColor(uint16_t Color);
 void LCD_SetBackColor(uint16_t Color);
 
-void LCD_SetPixel(uint16_t usX, uint16_t usY );
-uint16_t LCD_GetPixel( uint16_t usX , uint16_t usY );
-void LCD_Clear(uint16_t usX, uint16_t usY, uint16_t usWidth, uint16_t usHeight );
+void LCD_SetPixel(uint16_t usX, uint16_t usY);
+uint16_t LCD_GetPixel(uint16_t usX, uint16_t usY);
+void LCD_Clear(uint16_t usX, uint16_t usY, uint16_t usWidth, uint16_t usHeight);
 
-void LCD_DrawLine( uint16_t usa, uint16_t usY1, uint16_t usX1, uint16_t usY2 );
-void LCD_DrawRectangle( uint16_t usX_Start, uint16_t usY_Start, uint16_t usWidth, uint16_t usHeight,uint8_t ucFilled );
-void LCD_DrawCircle( uint16_t usX_Center, uint16_t usY_Center, uint16_t usRadius, uint8_t ucFilled );
+void LCD_DrawLine(uint16_t usX1, uint16_t usY1, uint16_t usX2, uint16_t usY2);
+void LCD_DrawRectangle(uint16_t usX_Start, uint16_t usY_Start, uint16_t usWidth, uint16_t usHeight, uint8_t ucFilled);
+void LCD_DrawCircle(uint16_t usX_Center, uint16_t usY_Center, uint16_t usRadius, uint8_t ucFilled);
 
-void LCD_DispStringEN( uint16_t usX, uint16_t usY, uint8_t uDir, char *pStr);
+void LCD_DispStringEN(uint16_t usX, uint16_t usY, uint8_t uDir, char *pStr);
 
 /* ILI9341 底层操作 */
 void ILI9341_WriteCmd(uint16_t usCmd);
